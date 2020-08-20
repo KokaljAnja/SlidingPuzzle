@@ -12,13 +12,14 @@ class Igra:
         self.stevilo_potez = stevilo_potez
         print(self.stevilo_potez)
 
-    
+
+
     def premiki(self, stevilo):
         if stevilo > 8:
             print('Error')
         else:
             izbrano_polje = self.polje(stevilo)
-            prazno_polje = self.polje_0() if self.stevilo_potez == 0 else self.prazno_polje
+            prazno_polje = self.polje_0()
 
             if (prazno_polje == (izbrano_polje[0] - 1, izbrano_polje[1])
                 or prazno_polje == (izbrano_polje[0] + 1, izbrano_polje[1])
@@ -26,7 +27,7 @@ class Igra:
                 or prazno_polje == (izbrano_polje[0], izbrano_polje[1] + 1)):
                 self.nakljucna_matrika[prazno_polje[0]][prazno_polje[1]] = stevilo
                 self.nakljucna_matrika[izbrano_polje[0]][izbrano_polje[1]] = 0
-                self. prazno_polje = (izbrano_polje[0], izbrano_polje[1])
+                prazno_polje = (izbrano_polje[0], izbrano_polje[1])
                 print(self.nakljucna_matrika)
                 self.stevilo_potez += 1
                 print(self.stevilo_potez)
@@ -70,3 +71,28 @@ def nova_igra():
         nakljucna_matrika.append(polje[:3])
         polje = polje[3:]
     return Igra(nakljucna_matrika)
+
+    
+
+ZACETEK = 'A'
+class Sliding_puzzle:
+    def __init__(self):
+        self.igre = {}
+
+    def prost_id_igre(self):
+        if self.igre == {}:
+            return 0
+        else:
+            return max(self.igra.keys()) + 1
+    
+    def nova_igra(self):
+        id_igre = self.prost_id_igre()
+        igra = nova_igra()
+        self.igre[id_igre] = (igra, ZACETEK)
+        return id_igre
+
+    def premiki(self, id_igre, stevilo):
+        igra, _ = self.igre[id_igre]
+        premik = igra.premiki(stevilo)
+        self.igre[id_igre] = (igra, premik)
+        return id_igre
