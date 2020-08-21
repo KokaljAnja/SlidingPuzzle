@@ -27,10 +27,11 @@ class Igra:
                 or prazno_polje == (izbrano_polje[0], izbrano_polje[1] + 1)):
                 self.nakljucna_matrika[prazno_polje[0]][prazno_polje[1]] = stevilo
                 self.nakljucna_matrika[izbrano_polje[0]][izbrano_polje[1]] = 0
-                prazno_polje = (izbrano_polje[0], izbrano_polje[1])
+                #prazno_polje = (izbrano_polje[0], izbrano_polje[1])
                 print(self.nakljucna_matrika)
                 self.stevilo_potez += 1
                 print(self.stevilo_potez)
+                return self.nakljucna_matrika
             else:
                 print('Neveljavna poteza, poizkusi znova!')
 
@@ -60,6 +61,15 @@ class Igra:
         else:
             return False
 
+    
+    def zadnja_poteza(self, stevilo):
+        if stevilo == None:
+            return self.nakljucna_matrika
+        else:
+            self.nakljucna_matrika = self.premiki(stevilo)
+            print(self.nakljucna_matrika)
+            return self.nakljucna_matrika
+
 
 
 def nova_igra():
@@ -72,7 +82,7 @@ def nova_igra():
         polje = polje[3:]
     return Igra(nakljucna_matrika)
 
-    
+Igra([[6, 1, 5], [0, 3, 2], [7, 4, 8]]).zadnja_poteza(3)
 
 ZACETEK = 'A'
 class Sliding_puzzle:
