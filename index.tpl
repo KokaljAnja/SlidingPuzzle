@@ -6,7 +6,7 @@
   <h1>Sliding Puzzle</h1>
 
   <blockquote>
-  Besedilo + spodaj dodaj še nekaj slik
+  Besedilo + spodaj dodaj še slike
 
   </blockquote>
 
