@@ -1,2 +1,6 @@
 # SlidingPuzzle
-poiskus
+## Projektna naloga za UVP
+
+Pri predmetu Uvod v programiranje, v prvem letniku študija finančne matematike sem izdelala preprosto igro Sliding Puzzle bolj znano kot 15-Puzzle. Izdelana je v programskem jeziku Python s pomočjo VScode. Vsebuje poleg te še 7 datotek in eno mapo. Datoteki 'base.tpl' in 'igra_sliding_puzzle.tpl' sta namenjeni možnosti in enostavnem izgledu spletne strani, medtem ko je 'index.tpl' namenjen zgolj statistiki. 'model_sliding_puzzle.py' je datoteka, kjer se nahaja vecina metod s katerimi se igra upravlja. Spletna stran je zagnana s pomočjo knjižnice bottle, ki se nahaja v datoteki 'bottle.py', glava kode pa se nahaja v 'sliding_puzzle.py' od kjer se poganjajo usi ukazi. Dodana je tudi mapa 'img', ki vsebuje nekaj slik, namenjenih okrasitvi in popestritvi igre.
+
+Uporaba je dokaj enostavna. Na zelenem gumbu si downlodaš zip file, ga unzipaš, in odpreš celotno mapo v VScode. Ko poženeš datoteko 'sliding_puzzle.py' se ti spodaj pokaže link, katerega enostavno prekopiraš v brskalnik. Nato le še uživaš!

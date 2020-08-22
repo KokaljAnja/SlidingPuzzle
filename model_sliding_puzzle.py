@@ -15,7 +15,7 @@ class Igra:
 
 
     def premiki(self, stevilo):
-        if stevilo > 8:
+        if stevilo > 15 and stevilo < 1:
             print('Error')
         else:
             izbrano_polje = self.polje(stevilo)
@@ -54,7 +54,7 @@ class Igra:
     
 
     def zmaga(self):
-        if self.nakljucna_matrika == [[0, 1, 2], [3, 4, 5], [6, 7, 8]]:
+        if self.nakljucna_matrika == [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 0]]:
             return True
         else:
             return False
@@ -80,13 +80,13 @@ class Igra:
 
 
 def nova_igra():
-    polje = [0 ,1 ,2, 3, 4, 5, 6, 7, 8]
+    polje = [0 ,1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     random.shuffle(polje)
 
     nakljucna_matrika = []
     while polje != []:
-        nakljucna_matrika.append(polje[:3])
-        polje = polje[3:]
+        nakljucna_matrika.append(polje[:4])
+        polje = polje[4:]
     return Igra(nakljucna_matrika)
 
 
@@ -100,7 +100,7 @@ class Sliding_puzzle:
         if self.igre == {}:
             return 0
         else:
-            return max(self.igra.keys()) + 1
+            return max(self.igre.keys()) + 1
     
     def nova_igra(self):
         id_igre = self.prost_id_igre()

@@ -29,6 +29,10 @@ def premiki():
     sliding_puzzle.premiki(id_igre, stevilo)
     bottle.redirect("/igra/")
 
+@bottle.get("/img/<picture>")
+def serve_pictures(picture):
+    return bottle.static_file(picture, root="img")
+
 
 
 bottle.run(reloader=True, debug=False)
