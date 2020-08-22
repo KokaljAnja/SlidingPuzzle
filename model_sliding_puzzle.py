@@ -15,6 +15,7 @@ class Igra:
 
 
     def premiki(self, stevilo):
+        stevilo = int(stevilo)
         if stevilo > 15 and stevilo < 1:
             print('Error')
         else:
@@ -70,11 +71,11 @@ class Igra:
 
     
     def stevilo_premikov(self, stevilo):
-        if stevilo == None:
-            return self.stevilo_potez
-        else:
+        if True:
             self.stevilo_potez += 1
-            return self.stevilo_potez
+            return self.stevilo_potez - 1
+        else:
+            return self.stevilo_potez - 1
 
 
 

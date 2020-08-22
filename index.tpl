@@ -1,5 +1,5 @@
 % import model_sliding_puzzle
-% rebase('base.tpl', title='Vislice')
+% rebase('base.tpl', title='SlidingPuzzle')
 
 
 
