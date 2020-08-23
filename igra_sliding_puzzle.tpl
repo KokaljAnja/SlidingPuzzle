@@ -5,25 +5,45 @@
     <h1>Sliding Puzzle</h1>
 
     <blockquote>
-     Obstaja 15 polj s številkami od 1 do 15 in eno polje je prazno, katero je prikazano
+     Obstaja 15 polj s številkami od 1 do 15 in eno prazno polje, katero je prikazano
      s številom 0. Preden se igra začne, računalnik naključno določi začetni položaj polj.
-     Premikaš lahko samo števila, ki so nad, pod, levo ali desno od 0. To pa narediš tako, da v spodnji
-     kvadrat vpišeš število, ki ga želiš premakniti in klikneš "Pošlji premik". Pri tem pazi, da vnešeno Število
-     ni večje od 15, ali pa celo 0, sicer se ne bo nič zgodilo.
+     Premikamo lahko samo števila, ki so nad, pod, levo ali desno od 0. To pa naredimo tako, da v spodnji
+     kvadrat vpišemo število, ki ga želimo premakniti in kliknemo "Pošlji premik". Vnešeno število
+     naj ne bo 0 in večje od 15. V nasprotnem primeru nam računalnik javi napako. Enako se zgodi, če kliknemo 
+     "Pošlji premik" brez vnešenega števila.
+
+     V primeru napake se moramo vrniti na prejšno stran. To pa naredimo tako, da enostavno kliknemo
+     na brskalniku puščico "nazaj" in brez problema nadaljujemo z igro.
     </blockquote>
 
-    <table>
-     <tr>
-        <td>
-        Število potez: <b>{{igra.stevilo_premikov(None)}}</b>
-        </td>
-     </tr>
+    <blockquote>
+     Cilj igre je razporediti števila po vrsti od levega zgornjega kota do desnega spodnjega kota. Polje 0, pa se
+     mora nahajati na zadnje mestu oziroma v spodnjem desnem polju.
+    </blockquote>
+
+    
+    Število potez: <b>{{igra.stevilo_premikov(None)}}</b>
+    
 
     </table>
+    
 
-    <table border="16" cellspacing="5">
-     
-     <tr>
+    <table>
+     <style>
+      div {
+        padding: 10px;
+        font-family: Arial;
+        font-size: 15pt;
+      }
+      table, th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        font-family: Arial;
+        font-size: 25pt;
+      }
+     </style>
+      <tr>
        <td>
        <b>{{igra.zadnja_poteza(None)[0][0]}}</b>
        </td>
@@ -39,9 +59,10 @@
        <td>
        <b>{{igra.zadnja_poteza(None)[0][3]}}</b>
        </td>
-     </tr>
 
-     <tr>
+      </tr>
+
+      <tr>
        <td>
        <b>{{igra.zadnja_poteza(None)[1][0]}}</b>
        </td>
@@ -56,10 +77,11 @@
 
        <td>
        <b>{{igra.zadnja_poteza(None)[1][3]}}</b>
-       </td>
-     </tr>
+       </td> 
 
-     <tr>
+      </tr>
+
+      <tr>
        <td>
        <b>{{igra.zadnja_poteza(None)[2][0]}}</b>
        </td>
@@ -75,9 +97,10 @@
        <td>
        <b>{{igra.zadnja_poteza(None)[2][3]}}</b>
        </td>
-     </tr>
 
-     <tr>
+      </tr>
+
+      <tr>
        <td>
        <b>{{igra.zadnja_poteza(None)[3][0]}}</b>
        </td>
@@ -93,7 +116,8 @@
        <td>
        <b>{{igra.zadnja_poteza(None)[3][3]}}</b>
        </td>
-     </tr>
+
+      </tr>
 
     </table>
 
@@ -101,7 +125,12 @@
 
     % if premik == model_sliding_puzzle.ZMAGA:
 
-    <h1> ZMAGA! </h1>
+    <img src="/img/YouWin.jpg" alt="NEKI"/>
+
+    <form action="/nova_igra/" method="post">
+    <button type="submit">Nova igra</button>
+  </form>
+
 
     % else:
 

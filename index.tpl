@@ -6,11 +6,11 @@
   <h1>Sliding Puzzle</h1>
 
   <blockquote>
-  Sliding Puzzle ali premičnica je prav zabavna igra,
-  ki vsebuje 15 oštevilčenih ploščic in eno prazno mesto na mreži
-  4x4. Računalnik naključno izbere mesta oštevilčenih ploščic, tvoja naloga pa
-  je, da s premikanjem praznega mesta dosežeš končni položaj ploščic (spodnja slika).
-  Želim ti veliko sreče pri igranju!
+  Sliding Puzzle ali Premičnica je prav zabavna igra.
+  Vsebuje 15 oštevilčenih ploščic in eno prazno mesto na mreži
+  4x4. Računalnik naključno izbere mesta oštevilčenih ploščic, naša naloga pa
+  je, da s premikanjem praznega mesta dosežemo končni položaj ploščic (spodnja slika).
+  Želim vam veliko sreče pri igranju!
 
   </blockquote>
 

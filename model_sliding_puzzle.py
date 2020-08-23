@@ -30,7 +30,6 @@ class Igra:
                 self.nakljucna_matrika[izbrano_polje[0]][izbrano_polje[1]] = 0
                 #prazno_polje = (izbrano_polje[0], izbrano_polje[1])
                 print(self.nakljucna_matrika)
-                return self.nakljucna_matrika
             else:
                 print('Neveljavna poteza, poizkusi znova!')
 
@@ -63,6 +62,7 @@ class Igra:
     
     def zadnja_poteza(self, stevilo):
         if stevilo == None:
+            print(self.nakljucna_matrika)
             return self.nakljucna_matrika
         else:
             self.nakljucna_matrika = self.premiki(stevilo)
@@ -79,9 +79,8 @@ class Igra:
 
 
 
-
 def nova_igra():
-    polje = [0 ,1 ,2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    polje = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     random.shuffle(polje)
 
     nakljucna_matrika = []
