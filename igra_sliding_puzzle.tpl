@@ -5,20 +5,20 @@
     <h1>Sliding Puzzle</h1>
 
     <blockquote>
-     Obstaja 15 polj s številkami od 1 do 15 in eno prazno polje, katero je prikazano
+     Obstaja 15 polj s števili od 1 do 15 in eno prazno polje, katero je prikazano
      s številom 0. Preden se igra začne, računalnik naključno določi začetni položaj polj.
-     Premikamo lahko samo števila, ki so nad, pod, levo ali desno od 0. To pa naredimo tako, da v spodnji
+     Premikamo lahko samo števila, ki so nad ali pod ter levo ali desno od 0. To pa naredimo tako, da v spodnji
      kvadrat vpišemo število, ki ga želimo premakniti in kliknemo "Pošlji premik". Vnešeno število
-     naj ne bo 0 in večje od 15. V nasprotnem primeru nam računalnik javi napako. Enako se zgodi, če kliknemo 
+     naj ne bo 0 ali večje od 15. V nasprotnem primeru nam računalnik javi napako. Enako se zgodi, če kliknemo 
      "Pošlji premik" brez vnešenega števila.
 
-     V primeru napake se moramo vrniti na prejšno stran. To pa naredimo tako, da enostavno kliknemo
+     V primeru napake se moramo vrniti na prejšnjo stran. To pa naredimo tako, da enostavno kliknemo
      na brskalniku puščico "nazaj" in brez problema nadaljujemo z igro.
     </blockquote>
 
     <blockquote>
-     Cilj igre je razporediti števila po vrsti od levega zgornjega kota do desnega spodnjega kota. Polje 0, pa se
-     mora nahajati na zadnje mestu oziroma v spodnjem desnem polju.
+     Cilj igre je razporediti števila po vrsti od levega zgornjega do desnega spodnjega kota. Polje 0, pa se
+     mora nahajati na zadnjem mestu oziroma v spodnjem kotu desno.
     </blockquote>
 
     
